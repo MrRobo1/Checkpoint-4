@@ -6,8 +6,12 @@ function SignUp() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const handleForm = (e) => {};
+
   return (
-    <form>
+    <form
+      onSubmit={handleForm}
+    >
         <div>
             <input 
               type="firstName"

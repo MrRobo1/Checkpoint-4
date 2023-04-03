@@ -1,0 +1,25 @@
+.cont-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    background-color: brown;
+}
+
+.box-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    width: 65px;
+    height: 50px;
+}
+
+.box-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 1rem;
+}
