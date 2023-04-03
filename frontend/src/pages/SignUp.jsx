@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import assetAPI from "../services/assetAPI";
 
 function SignUp() {
     const [firstName, setFirstName] = useState("");
@@ -6,7 +8,21 @@ function SignUp() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleForm = (e) => {};
+    const navigate = useNavigate();
+
+    const handleForm = (e) => {
+      e.preventDefault();
+
+      if (firstName, lastName, email, password) {
+        assetAPI
+          .post("/user", { firstName, lastName, email, password })
+          .then(() => navigate("/login"))
+          .catch((err) => console.log(err));
+        console.log("Form submitted");
+      } else {
+        alert("Please specify all fields");
+      }
+    };
 
   return (
     <form

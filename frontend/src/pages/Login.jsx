@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import assetAPI from "../services/assetAPI";
+import tower from "../assets/imglogin.jpeg"
 
 import { useAuthContext } from "../contexts/authContext";
 
@@ -39,6 +40,9 @@ function Login() {
   return (
     <div className={styles["cont-form"]}>
       <div className={styles["card-form"]}>
+        <div className={styles["box-img-login"]}>
+          <img  clasName={styles["img-login"]} src={tower} alt="tower" />
+        </div>
         <form 
           className={styles["form-login"]} 
           onSubmit={handleSubmit}>

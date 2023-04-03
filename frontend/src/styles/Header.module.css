@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 50px;
-    background-color: brown;
+    background-color: #546A7B;
 }
 
 .box-logo {
@@ -22,4 +22,18 @@
     flex-direction: row;
     align-items: center;
     margin-right: 1rem;
+}
+
+@media screen and (min-width: 993px) {
+    .cont-head {
+        background-color: #9EA3B0;
+    }
+
+    .box-logo {
+        margin-right: 5rem;
+    }
+
+    .box-link {
+        margin-right: 5rem;
+    }
 }

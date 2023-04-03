@@ -1,0 +1,43 @@
+.nav {
+    background-color:#546A7B;
+    height: 50px;
+    display: flex;
+  }
+  
+.ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding-right: 5rem;
+    gap: 2rem;
+  }
+  
+.li {
+    margin: 0 10px;
+  }
+  
+.link-navbar {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+  }
+  
+.link-navbar:hover::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+  }
+  
+  @media screen and (max-width: 993px) {
+    .nav {
+        display: none;
+    }
+  }

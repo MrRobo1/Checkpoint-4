@@ -1,5 +1,9 @@
 import { Routes, Route } from "react-router-dom";
+
+import { useAuthContext } from "./contexts/authContext";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import Navbar from "./components/Navbar.jsx";
+import NavbarDesk from "./components/NavbarDesk.jsx";
 import Header from "./components/Header.jsx";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -14,6 +18,7 @@ function App() {
   return (
     <>
       <Header />
+      <NavbarDesk />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
