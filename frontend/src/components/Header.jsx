@@ -1,11 +1,29 @@
-import { LogInOutline, LogOutOutline } from 'react-ionicons'
+import { useNavigate } from "react-router-dom";
+
+import assetAPI from "../services/assetAPI";
+import { useAuthContext } from "../contexts/authContext";
+
+import { LogInOutline, LogOutOutline } from 'react-ionicons';
 
 import styles from "../styles/Header.module.css";
 import logo from "../assets/logo.png";
 
 function Header() {
+  const { user, setUser } = useAuthContext();
 
-    const handleDisconnection = () => {}
+  const navigate = useNavigate();
+
+    const handleDisconnection = () => {
+      assetAPI
+        .get("/logout")
+        .then(() => {
+          localStorage.clear();
+          setUser(undefined);
+          navigate("/");
+        })
+        .catch((err) => 
+        console.error(err));
+    };
 
 
 
@@ -15,19 +33,18 @@ function Header() {
             <img className={styles.logo} src={logo} alt="logo" />
         </div>
         <div className={styles["box-link"]}>
-            <LogOutOutline
-              color={'#ffffff'} 
-              height="35px"
-              width="35px"
-            />
-            <a href="/login">
-            <LogInOutline
+          {user ? <LogOutOutline
               color={'#ffffff'} 
               height="35px"
               width="35px"
               onClick={handleDisconnection}
+            /> : <a href="/login">
+            <LogInOutline
+              color={'#ffffff'} 
+              height="35px"
+              width="35px"
             />
-            </a>
+            </a> } 
         </div>  
     </div>
   )

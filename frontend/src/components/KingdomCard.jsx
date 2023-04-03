@@ -1,14 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-function KingdomCard( { name, asset} ) {
+import styles from "../styles/KingdomCard.module.css";
+
+function KingdomCard( { name } ) {
   return (
-    <div>
-        <h1>Kingdom {name}</h1>
-        <ul>
-            <li>{asset}</li>
-            <li>{asset}</li>
-            <li>{asset}</li>
-        </ul>
+    <div className={styles["card-cont"]}>
+        <h1 className={styles["card-title"]}>Kingdom {name}</h1>
+        <img src="" alt="" />
     </div>
   )
 }

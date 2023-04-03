@@ -1,20 +1,30 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+
+import assetAPI from "../services/assetAPI";
+
+import KingdomCard from "../components/KingdomCard";
+
+import styles from "../styles/kingdoms.module.css"
 
 function Kingdoms() {
     const [kingdoms, setKingdoms] = useState([]);
 
-    useEffect(() => {}, []);
+    useEffect(() => {
+      assetAPI
+        .get("/kingdoms")
+        .then(res => setKingdoms(res.data))
+        .catch(err => console.error(err));
+    }, []);
 
   return (
-    <div>
-        <h1>Kingdom's</h1>
+    <div className={styles["cont-king"]}>
+        <h1 className={styles["title-king"]}>Kingdom's</h1>
         <input type="select" />
-        <div>
+        <div className={styles["box-card"]}>
             {kingdoms.map((kingdom) => (
               <KingdomCard 
                 key={kingdom.id} 
                 name={kingdom.name} 
-                asset={kingdom.asset} 
             />
             ))}
         </div>

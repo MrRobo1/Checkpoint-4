@@ -9,6 +9,8 @@ import KingdomAsset from "./pages/KingdomAsset.jsx";
 
 function App() {
 
+  const { user } = useAuthContext();
+
   return (
     <>
       <Header />
@@ -17,7 +19,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/kingdoms" element={<Kingdoms />} />
-        <Route path="/kingdom/asset" element={<KingdomAsset />} />
+        <Route element={<ProtectedRoute user={user} />}>
+          <Route path="/kingdom/asset" element={<KingdomAsset />} />
+        </Route>
       </Routes>
       <Navbar />
     </>

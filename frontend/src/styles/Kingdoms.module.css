@@ -1,0 +1,20 @@
+.cont-king {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-king {
+    padding-top: 2rem;
+}
+
+.box-card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    margin-top: 5rem;
+    padding-left: 1rem;
+    justify-content: flex-start;
+}
