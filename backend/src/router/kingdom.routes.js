@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { getAll, getOne, createOne, updateName, deleteKingdom } = require("../controller/kingdom.controller.js");
+const { getAll, getOne, createOne, updateOneById, deleteOne } = require("../controller/kingdom.controller.js");
 
 const router = express.Router();
 
@@ -9,8 +9,8 @@ router.get("/:id", getOne);
 
 router.post("/", createOne);
 
-router.put("/", updateName);
+router.put("/:id", updateOneById);
 
-router.delete("/", deleteKingdom);
+router.delete("/:id", deleteOne);
 
 module.exports = router;

@@ -6,7 +6,7 @@ import KingdomCard from "../components/KingdomCard";
 
 import styles from "../styles/kingdoms.module.css"
 
-function Kingdoms() {
+function Kingdoms( ) {
     const [kingdoms, setKingdoms] = useState([]);
 
     useEffect(() => {
@@ -19,12 +19,13 @@ function Kingdoms() {
   return (
     <div className={styles["cont-king"]}>
         <h1 className={styles["title-king"]}>Kingdom's</h1>
-        <input type="select" />
+        <input className={styles.input} type="select" />
         <div className={styles["box-card"]}>
             {kingdoms.map((kingdom) => (
               <KingdomCard 
                 key={kingdom.id} 
-                name={kingdom.name} 
+                name={kingdom.name}
+                id={kingdom.id}
             />
             ))}
         </div>

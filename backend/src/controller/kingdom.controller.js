@@ -34,18 +34,19 @@ const createOne = async (req, res) => {
   }
 };
 
-const updateName = async (req, res) => {
-    try {
-        const { name } = req.body;
-        const result = await updateById({ name });
-        return result;
-    } catch (err) {
-        console.log(err);
-    }
+const updateOneById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { name } = req.body;
+    const result = await updateById(id, { name });
+    return result;
+  } catch (err) {
+    console.log(err);
+  }
 };
 
-const deleteKingdom = async (req, res, next) => {
-    const { id } = req.params;
+const deleteOne = async (req, res, next) => {
+    const  id  = req.params.id;
   
     try {
       const result = await removeOne(id);
@@ -60,4 +61,4 @@ const deleteKingdom = async (req, res, next) => {
   };
   
 
-module.exports = { getAll, getOne, createOne, updateName, deleteKingdom };
+module.exports = { getAll, getOne, createOne, updateOneById, deleteOne };

@@ -13,7 +13,7 @@ function NavbarDesk() {
           <Link  className={styles["link-navbar"]} to="/kingdoms">Kingdom's</Link>
         </li>
         <li>
-          <Link  className={styles["link-navbar"]} to="/royal-assets">Royal Assets</Link>
+          <Link  className={styles["link-navbar"]} to="/kingdom/create">Create</Link>
         </li>
       </ul>
     </nav>

@@ -9,7 +9,6 @@
 .box-img {
     width: 90%;
     height: 200px;
-    padding-top: 2rem;
 }
 
 .home-img {
@@ -28,29 +27,24 @@
     margin-left: 1rem;
 }
 
-.sub-title-home {
-    padding-top: 2rem;
-}
-
 .title-home {
     color: white;
 }
 
 .sub-title-home {
-    margin-top: 2rem;
+    margin-top: 3rem;
     color: white;
 }
 
 .text-home {
     color: white;
-    padding-top: 5rem;
+    padding-top: 2rem;
 }
 
 @media screen and (min-width: 993px) {
     .box-img {
         width: 65%;
         height: 400px;
-        padding-top: 5rem;
     }
 
     .desc-home {

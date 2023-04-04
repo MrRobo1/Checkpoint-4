@@ -8,14 +8,55 @@
 
 .title-king {
     padding-top: 2rem;
+    color: white;
 }
 
 .box-card {
     display: flex;
     width: 100%;
     height: 100%;
+    gap: 1rem;
     flex-direction: row;
     margin-top: 5rem;
     padding-left: 1rem;
-    justify-content: flex-start;
+    margin-right: 1rem;
+}
+
+.box-del-edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.input {
+    margin-top: 2rem;
+    color: #fff;
+    background-color: #546a7b;
+    box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+    border-radius: 0.4vw;
+    border: none;
+    outline: none;
+    padding: 0.6vw;
+    max-width: 190px;
+    transition: .4s;
+}
+
+.input:hover {
+    box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+  
+.input:focus {
+    box-shadow: 0 0 0 .15vw skyblue;
+  }
+
+@media screen and (min-width: 993px) {
+    .box-card {
+        width: 65%;
+        height: 400px;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
 }

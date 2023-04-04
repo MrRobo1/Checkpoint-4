@@ -33,23 +33,26 @@ const addOne = async (kingdom) => {
 
 const updateById = async (id, kingdom) => {
     try {
-        const { name } = kingdom;
-        const [result] = await db.query("UPDATE kingdoms SET name = ? WHERE id = ?", [name, id]);
-
-        return result;
+      const { name } = kingdom;
+      const [result] = await db.query("UPDATE kingdoms SET name = ? WHERE id = ?", [name, id]);
+      return result;
     } catch (err) {
-        console.log(err);
+      console.log(err);
     }
-}
+  };
 
 const removeOne = async (id) => {
     try {
+        if (isNaN(id)) {
+          throw new Error("ID should be a number");
+        }
+    
         const [result] = await db.query("DELETE FROM kingdoms WHERE id = ?", [id]);
-
+    
         return result;
-    } catch (err) {
+      } catch (err) {
         console.log(err);
-    }
-}
+      }
+    };
 
 module.exports = { findAll, findOne, addOne, updateById, removeOne };

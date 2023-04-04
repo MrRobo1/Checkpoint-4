@@ -37,7 +37,7 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/kingdom/asset">
+            <NavLink to="/kingdom/create">
               {location.pathname === "/kingdom/asset" ? (
                 <ConstructSharp color="#ffffff" height="35px" width="35px" />
               ) : (
