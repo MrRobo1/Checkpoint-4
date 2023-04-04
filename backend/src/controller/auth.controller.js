@@ -5,7 +5,7 @@ const validateLogin = require("../validator/login.validator.js");
 const { ModelValidationError } = require("../errors/ModelValidationError.js");
 const { InvalidCredentailsError } = require("../errors/InvalidCredentialsError.js");
 
-const login = async (req, res) => {
+const login = async (req, res, next) => {
     try {
         const errors = validateLogin(req.body);
 
@@ -34,6 +34,6 @@ const login = async (req, res) => {
 const logout = async (req, res) => {
     res.clearCookie("auth_token");
     res.sendStatus(200);
-}
+};
 
 module.exports = { login, logout };

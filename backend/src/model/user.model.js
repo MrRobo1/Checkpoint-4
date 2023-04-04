@@ -22,10 +22,10 @@ const findByEmail = async (email) => {
 
 const addOne = async (user) => {
     try {
-    const { firstname, lastname, email, password } = user;
-    const [result] = await db.query("INSERT INTO users (firstname, lastname, email, password) VALUES (?, ?, ?, ?)", [firstname, lastname, email, password]);
+    const { firstName, lastName, email, password } = user;
+    const [result] = await db.query("INSERT INTO users (firstname, lastname, email, password) VALUES (?, ?, ?, ?)", [firstName, lastName, email, password]);
 
-    return {id: result.insertId, firstname, lastname, email};
+    return {id: result.insertId, firstName, lastName, email};
     } catch (err) {
         console.log(err);
     }

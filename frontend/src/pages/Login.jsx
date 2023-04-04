@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import assetAPI from "../services/assetAPI";
-import tower from "../assets/imglogin.jpeg"
+import tower from "../assets/imglogin.jpeg";
 
 import { useAuthContext } from "../contexts/authContext";
 
@@ -27,7 +27,7 @@ function Login() {
           .then((res) => {
             setUser(res.data)
             localStorage.setItem("user", JSON.stringify(res.data));
-            navigate("/kingdoms");
+            navigate("/kingdom/create");
           })
           .catch((err) => {
             console.log(err);
@@ -41,7 +41,7 @@ function Login() {
     <div className={styles["cont-form"]}>
       <div className={styles["card-form"]}>
         <div className={styles["box-img-login"]}>
-          <img  clasName={styles["img-login"]} src={tower} alt="tower" />
+          <img  className={styles["img-login"]} src={tower} alt="tower" />
         </div>
         <form 
           className={styles["form-login"]} 
@@ -56,7 +56,7 @@ function Login() {
                 onChange={(e) => setEmail(e.target.value)} 
               />
           </div>
-          <div className={styles["box-pass"]}>
+          <div className={styles["box-email"]}>
               <input 
                 className={styles["input"]}
                 placeholder="Password" 
@@ -73,6 +73,9 @@ function Login() {
               <span className={styles.front}> Log In
               </span>
             </button>
+            <p className={styles["text-signup"]}>
+              Don't have an account? <Link to="/SignUp">Register</Link>
+            </p>
           </div>
         </form>
       </div>

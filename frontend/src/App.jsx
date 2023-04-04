@@ -10,6 +10,8 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Kingdoms from "./pages/Kingdoms";
 import KingdomAsset from "./pages/KingdomAsset.jsx";
+import CreateKingdom from "./pages/CreateKingdom";
+import Footer from "./components/Footer.jsx";
 
 function App() {
 
@@ -26,9 +28,11 @@ function App() {
         <Route path="/kingdoms" element={<Kingdoms />} />
         <Route element={<ProtectedRoute user={user} />}>
           <Route path="/kingdom/asset" element={<KingdomAsset />} />
+          <Route path="/kingdom/create" element={<CreateKingdom />} />
         </Route>
       </Routes>
       <Navbar />
+      <Footer />
     </>
       )
 }

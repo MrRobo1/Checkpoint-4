@@ -1,0 +1,44 @@
+.cont-kingdom-create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card-king {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #546A7B;
+    height: 300px;
+    width: 75%;
+    border-radius: 1rem;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(85, 85, 113, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(85, 85, 113, 1);
+    box-shadow: 8px 8px 24px 0px rgba(85, 85, 113, 1);
+}
+
+.form-king {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    color: #fff;
+    background-color: #0D1F2D;
+    box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+    border-radius: 0.4vw;
+    border: none;
+    outline: none;
+    padding: 0.6vw;
+    max-width: 190px;
+    transition: .4s;
+}
+
+.input:hover {
+    box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+  
+.input:focus {
+    box-shadow: 0 0 0 .15vw skyblue;
+}

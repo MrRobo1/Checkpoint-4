@@ -1,0 +1,39 @@
+.cont-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: #546A7B;
+}
+
+.box-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.img-linkedin {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+}
+
+.img-github {
+    width: 30px;
+    height: 30px;
+}
+
+.copyright-footer {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    color: white;
+}
+
+@media screen and (max-width: 993px) {
+    .cont-footer {
+        display: none;
+    }
+}

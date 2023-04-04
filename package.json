@@ -1,0 +1,26 @@
+{
+  "name": "check4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "cd ./backend && node migrate.js",
+    "dev": "cross-env-shell 'concurrently -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"$npm_package_config_cli:dev-*\"'",
+    "dev-front": "cross-env-shell \"cd ./frontend && $npm_package_config_cli run dev\"",
+    "dev-back": "cross-env-shell \"cd ./backend && $npm_package_config_cli run dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrRobo1/Checkpoint-4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrRobo1/Checkpoint-4/issues"
+  },
+  "homepage": "https://github.com/MrRobo1/Checkpoint-4#readme",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
